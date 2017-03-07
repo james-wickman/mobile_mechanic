@@ -15,24 +15,24 @@ button{
   font-size:inherit;
   width: 100%;
 }
-.users_info {
+.users_info, .mechanics_info {
 	width: 300px;
 	height: 300px;
 	background-color: lightgrey;
 	opacity: 0.9;
 }
-.vehicles_list {
+.vehicles_list, .jobs_list {
 	position: absolute;
 	top:50px;
 	width: 100%;
 	height: 100%;
 	background-color: lightblue;
 }
-.vehicles_head {
+.vehicles_head, .mechanic_jobs_head{
 	text-align: center;
 	text-decoration: underline;
 }
-.edit_profile, .add_vehicle {
+.edit_profile, .add_vehicle, .edit_mechanic_profile, .add_job {
 	position: absolute;
 	top:50px;
 	right: 30px;
@@ -41,7 +41,7 @@ button{
 	background-color: silver;
 
 }
-.user_vehicles_list {
+.user_vehicles_list, .mechanic_jobs_list {
 	text-align: center;
 }
 
