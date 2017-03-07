@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'jobs/create'
+
+  get 'jobs/show'
+
+  get 'jobs/update'
+
+  get 'vehicles/create'
+
+  get 'vehicles/show'
+
+  get 'vehicles/update'
+
   get 'mechanics/index'
 
   get 'mechanics/show'
