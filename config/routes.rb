@@ -1,21 +1,19 @@
 Rails.application.routes.draw do
-  get 'jobs/create'
+  post 'jobs/create'
 
   get 'jobs/show'
 
-  get 'jobs/update'
+  put 'jobs/update'
 
-  get 'vehicles/create'
+  post 'vehicles/create'
 
   get 'vehicles/show'
 
-  get 'vehicles/update'
+  put 'vehicles/update'
 
   get 'mechanics/index'
 
   get 'mechanics/show'
-
-  get 'home/index'
 
   get 'users/index'
 

@@ -1,13 +1,12 @@
                       Prefix Verb   URI Pattern                           Controller#Action
-                 jobs_create GET    /jobs/create(.:format)                jobs#create
+                 jobs_create POST   /jobs/create(.:format)                jobs#create
                    jobs_show GET    /jobs/show(.:format)                  jobs#show
-                 jobs_update GET    /jobs/update(.:format)                jobs#update
-             vehicles_create GET    /vehicles/create(.:format)            vehicles#create
+                 jobs_update PUT    /jobs/update(.:format)                jobs#update
+             vehicles_create POST   /vehicles/create(.:format)            vehicles#create
                vehicles_show GET    /vehicles/show(.:format)              vehicles#show
-             vehicles_update GET    /vehicles/update(.:format)            vehicles#update
+             vehicles_update PUT    /vehicles/update(.:format)            vehicles#update
              mechanics_index GET    /mechanics/index(.:format)            mechanics#index
               mechanics_show GET    /mechanics/show(.:format)             mechanics#show
-                  home_index GET    /home/index(.:format)                 home#index
                  users_index GET    /users/index(.:format)                users#index
                   users_show GET    /users/show(.:format)                 users#show
       home_unique_user_email GET    /home/unique_user_email(.:format)     home#unique_user_email
