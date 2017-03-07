@@ -1,2 +1,19 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+
+
+<div class="vehicles_list">
+	<div class="vehicles_head"><h1>Vehicles</h1></div>
+</div>
+
+<div class="users_info">
+	<h3><%= current_user.first_name %>
+	<%= current_user.last_name %></h3><br>
+	<h4><%= current_user.email %></h4>
+	
+</div>
+<div class="hidden edit_profile">
+	<%= render 'users/registrations/edit' %>
+</div>
+<div class="hidden add_vehicle">
+	this
+</div>

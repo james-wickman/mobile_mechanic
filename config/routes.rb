@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   get 'users/show'
 
+  get 'home/unique_user_email'
+  
+  get 'home/unique_mechanic_email'
+
 	devise_for :mechanics, controllers: {
         sessions: 'mechanics/sessions',
         registrations: 'mechanics/registrations'
