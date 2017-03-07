@@ -14006,3 +14006,161 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 621ms (Views: 616.6ms | ActiveRecord: 0.5ms)
 
 
+Started DELETE "/users/sign_out" for ::1 at 2017-03-06 21:34:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+RK5uIEg5MzIKQvZ5ozyJOWisULSkfttzGqi2pIzFMhmg/hzalEa5bF7N+NzfovAsBx2oyyMN7etzRpc62jDGA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-06 21:34:06 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered users/sessions/_new.html.erb (28.8ms)
+  Rendered mechanics/sessions/_new.html.erb (5.3ms)
+  Rendered users/registrations/_new.html.erb (3.0ms)
+  Rendered mechanics/registrations/_new.html.erb (2.5ms)
+Completed 200 OK in 489ms (Views: 469.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/mechanics/sign_in" for ::1 at 2017-03-06 21:45:48 -0700
+Processing by Mechanics::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4iwI3KiL4tDXu2qUbl8wIHQALKfrZ1lrJLiOocdoqxPLB0eeDLNLQCf0gvaJoY/ZejwupySkG4D9gFQvy9K8hw==", "mechanic"=>{"email"=>"nauticalnova@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mMechanic Load (0.8ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."email" = ? ORDER BY "mechanics"."id" ASC LIMIT ?[0m  [["email", "nauticalnova@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "mechanics" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "mechanics"."id" = ?[0m  [["current_sign_in_at", 2017-03-07 04:45:48 UTC], ["last_sign_in_at", 2017-03-06 17:42:59 UTC], ["sign_in_count", 3], ["updated_at", 2017-03-07 04:45:48 UTC], ["id", 2]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 174ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2017-03-06 21:45:48 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? ORDER BY "mechanics"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mechanics/show" for ::1 at 2017-03-06 21:45:52 -0700
+Processing by MechanicsController#show as HTML
+  Rendering mechanics/show.html.erb within layouts/application
+  Rendered mechanics/show.html.erb within layouts/application (0.5ms)
+  [1m[36mMechanic Load (0.4ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? ORDER BY "mechanics"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/mechanics/sign_out" for ::1 at 2017-03-06 21:46:01 -0700
+Processing by Mechanics::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AUeenXqSD0RgTqbaioApt1sCUWTwY4nHVAZ2fiLCBX45ZlWkn/bqc0CGvUuLOSNSilt0GJdu5uxyZOJLr/7aKA=="}
+  [1m[36mMechanic Load (0.2ms)[0m  [1m[34mSELECT  "mechanics".* FROM "mechanics" WHERE "mechanics"."id" = ? ORDER BY "mechanics"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-03-06 21:46:01 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered users/sessions/_new.html.erb (5.3ms)
+  Rendered mechanics/sessions/_new.html.erb (3.6ms)
+  Rendered users/registrations/_new.html.erb (7.7ms)
+  Rendered mechanics/registrations/_new.html.erb (5.2ms)
+Completed 200 OK in 98ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-03-06 21:46:08 -0700
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A0BDJ+LWcM3cSOsYr9xicORDgcOGnLxH/25mZXFMaOIPt1GqeFmUVz5TXEvehpxK+WLM4ImOsRQUGc2fkl25Nw==", "user"=>{"email"=>"nnn@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nnn@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-03-07 04:46:08 UTC], ["sign_in_count", 2], ["updated_at", 2017-03-07 04:46:08 UTC], ["id", 4]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 158ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-06 21:46:08 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/show" for ::1 at 2017-03-06 21:46:17 -0700
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/registrations/_edit.html.erb (12.2ms)
+  Rendered vehicles/_new_vehicle.html.erb (7.2ms)
+  Rendered users/show.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 96ms (Views: 73.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/show" for ::1 at 2017-03-06 21:47:20 -0700
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mVehicle Load (1.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/registrations/_edit.html.erb (4.2ms)
+  Rendered vehicles/_new_vehicle.html.erb (1.9ms)
+  Rendered users/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 1.3ms)
+
+
+Started PUT "/users" for ::1 at 2017-03-06 21:47:55 -0700
+DEPRECATION WARNING: after_filter is deprecated and will be removed in Rails 5.1. Use after_action instead. (called from <class:RegistrationsController> at /repositories/final_project/mobile_mechanic/app/controllers/users/registrations_controller.rb:4)
+Processing by Users::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5O8/aytSZPfhJbqfxujKAnDcTfYFGNZGVwiPpruYgbDY0nSZrswv2TKvD8czjuNLHdFueLUyysT6AZQvjKaZuA==", "user"=>{"first_name"=>"1", "last_name"=>"Wickman", "email"=>"nauticalnova@hotmail.com", "city"=>"1234re", "state"=>"ut", "zip"=>"1234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "nauticalnova@hotmail.com"], ["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering /Users/w/.rvm/gems/ruby-2.4.0/gems/devise-4.2.0/app/views/devise/registrations/edit.html.erb within layouts/application
+  Rendered /Users/w/.rvm/gems/ruby-2.4.0/gems/devise-4.2.0/app/views/devise/registrations/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 338ms (Views: 39.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/show" for ::1 at 2017-03-06 21:48:03 -0700
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/registrations/_edit.html.erb (7.9ms)
+  Rendered vehicles/_new_vehicle.html.erb (1.8ms)
+  Rendered users/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/show" for ::1 at 2017-03-06 21:48:48 -0700
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/registrations/_edit.html.erb (3.8ms)
+  Rendered vehicles/_new_vehicle.html.erb (2.1ms)
+  Rendered users/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 49ms (Views: 41.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/show" for ::1 at 2017-03-06 21:50:19 -0700
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/registrations/_edit.html.erb (6.6ms)
+  Rendered vehicles/_new_vehicle.html.erb (1.6ms)
+  Rendered users/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+

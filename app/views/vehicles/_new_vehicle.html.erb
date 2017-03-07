@@ -1,6 +1,6 @@
 
 
-<%= form_for @new_vehicle, :url => vehicles_create_path do |f| %>
+<%= form_for @new_vehicle, :url => vehicles_create_path, :html => {:id => "new_user_form", :"data-parsley-validate" => ""} do |f| %>
 	<br>
   <div class="field">
     <%= f.hidden_field :user_id, value: current_user.id %>
@@ -11,11 +11,11 @@
   </div><br> -->
   <div class="field">
     <%= f.label :make %> <br />
-    <%= f.text_field :make, autofocus: true %>
+    <%= f.text_field :make, autofocus: true, class: 'form-control', "data-parsley-trigger" => "change", "data-parsley-minlength" => "2", required:"" %>
   </div><br>
   <div class="field">
     <%= f.label :model %> <br />
-    <%= f.text_field :model %>
+    <%= f.text_field :model, class: 'form-control', "data-parsley-trigger" => "change", "data-parsley-minlength" => "2", required:"" %>
   </div><br>
   <div class="actions">
     <%= f.submit "Update" %>
