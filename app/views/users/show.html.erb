@@ -3,6 +3,13 @@
 
 <div class="vehicles_list">
 	<div class="vehicles_head"><h1>Vehicles</h1></div>
+
+	<div class="user_vehicles_list">
+		<% current_user.vehicles.each do |vehicle| %>
+			<%= vehicle.make %>
+			<%= vehicle.model %>
+		<% end %>
+	</div>
 </div>
 
 <div class="users_info">
@@ -15,5 +22,5 @@
 	<%= render 'users/registrations/edit' %>
 </div>
 <div class="hidden add_vehicle">
-	this
+	<%= render 'vehicles/new_vehicle' %>
 </div>
