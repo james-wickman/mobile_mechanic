@@ -6,8 +6,9 @@
 
 	<div class="user_vehicles_list">
 		<% current_user.vehicles.each do |vehicle| %>
-			<%= vehicle.make %>
-			<%= vehicle.model %>
+			<%= vehicle.make %> <br>
+			<%= vehicle.model %> <%= link_to "Delete", vehicles_destroy_path(id: vehicle.id), method: :delete %>
+			<hr>
 		<% end %>
 	</div>
 </div>

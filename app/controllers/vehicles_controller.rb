@@ -12,6 +12,13 @@ class VehiclesController < ApplicationController
   def update
   end
 
+  def destroy
+    @vehicle = Vehicle.find(params[:id])
+    if @vehicle.destroy
+      redirect_to users_show_path
+    end
+  end
+
   private
 
   def vehicle_params

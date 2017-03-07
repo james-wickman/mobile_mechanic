@@ -23,6 +23,10 @@ Rails.application.routes.draw do
   
   get 'home/unique_mechanic_email'
 
+  delete 'vehicles/destroy'
+
+  delete 'jobs/destroy'
+
 	devise_for :mechanics, controllers: {
         sessions: 'mechanics/sessions',
         registrations: 'mechanics/registrations'
